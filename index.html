@@ -1,8 +1,13 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>G-code 实验室</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700;900&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;600;700&display=swap">
+<link rel="preload" href="vendor/fonts/NotoSansSC.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* 字体随站点一起发布，不依赖 Google Fonts。只含本页用到的字符（vendor/fonts/README.md 里有重新生成的方法），
+   用户文件里出现的生僻字会退回系统字体 */
+@font-face { font-family: "Noto Sans SC"; src: url("vendor/fonts/NotoSansSC.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: "Noto Serif SC"; src: url("vendor/fonts/NotoSerifSC.woff2") format("woff2"); font-weight: 700 900; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url("vendor/fonts/JetBrainsMono.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+</style>
 <style>
 /* 版式：车间手册。铝型材灰的底，黄铜色（喷嘴、PEI 板）做强调，宋体粗标题像教材，代码一律等宽；
    首页主视觉是一块正在逐层打印的多色截面，其余部分保持安静。 */
@@ -4112,8 +4117,9 @@ $("#zOut").onclick = () => zoomAt(1.4, canvas.width / 2, canvas.height / 2);
 $("#zFit").onclick = () => { view2 = null; draw(); };
 
 /* ---------- 3D 视图（three.js，按需加载） ---------- */
-const THREE_BASE = "https://cdn.jsdelivr.net/npm/three@0.128.0/";
-const THREE_FILES = ["build/three.min.js", "examples/js/controls/OrbitControls.js", "examples/js/lines/LineSegmentsGeometry.js", "examples/js/lines/LineMaterial.js", "examples/js/lines/LineSegments2.js"];
+// three.js r128 随站点发布在 vendor/three/，不依赖 CDN
+const THREE_BASE = "vendor/three/";
+const THREE_FILES = ["three.min.js", "OrbitControls.js", "LineSegmentsGeometry.js", "LineMaterial.js", "LineSegments2.js"];
 let threeLoading = null;
 function loadThree() {
   if (window.THREE && THREE.LineSegments2 && THREE.OrbitControls) return Promise.resolve();
@@ -4231,7 +4237,7 @@ function update3D() {
 }
 async function enter3D() {
   if (!V3.r) threeMsg(L("正在加载 3D 视图…", "Loading 3D view…"));
-  try { await loadThree(); } catch (e) { threeMsg(L("3D 视图需要从 cdn.jsdelivr.net 加载 three.js，这次没有加载成功。请检查网络后再点一次\"3D\"。", "The 3D view needs to load three.js from cdn.jsdelivr.net, and that failed this time. Check your connection and click \"3D\" again.")); return; }
+  try { await loadThree(); } catch (e) { threeMsg(L("3D 视图需要加载 three.js，这次没有加载成功。请检查网络后再点一次\"3D\"。", "The 3D view needs to load three.js, and that failed this time. Check your connection and click \"3D\" again.")); return; }
   try { if (!V3.r) init3D(); } catch (e) { threeMsg(L("这个浏览器无法创建 WebGL 画布，3D 视图不可用。俯视图仍然可以用。", "This browser can't create a WebGL canvas, so the 3D view isn't available. The top view still works.")); return; }
   threeMsg("");
   if (viewTab !== "3d") return;

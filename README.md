@@ -26,7 +26,9 @@ open index.html
 
 ## 依赖
 
-- 字体：Google Fonts（Noto Serif SC、Noto Sans SC、JetBrains Mono）
-- 3D 视图：按需从 jsDelivr 加载 [three.js](https://threejs.org/) r128
+所有文件都随站点一起发布，不请求任何外部服务器（不用 Google Fonts，也不用 CDN），国内外访问一致。
 
-学习进度只保存在浏览器本地（localStorage）。
+- `vendor/fonts/`：Noto Serif SC、Noto Sans SC、JetBrains Mono，按页面用字裁剪过。改了网页文字后需要重新生成，方法见 [vendor/fonts/README.md](vendor/fonts/README.md)
+- `vendor/three/`：[three.js](https://threejs.org/) r128 及 OrbitControls、Line2 系列，只在打开 3D 视图时加载
+
+学习进度和主题、语言选择只保存在浏览器本地（localStorage）。
