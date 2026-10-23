@@ -1,5 +1,7 @@
 <div align="center">
 
+**简体中文** · [English](README.en.md)
+
 # G-code 实验室 · GcodeLAB
 
 **读懂切片软件写给 3D 打印机的每一行 G-code**
@@ -71,7 +73,7 @@
 <li>手机上也能用</li>
 <li>你打开的 G-code 文件只在自己的浏览器里解析，<b>不会上传</b></li>
 <li>学习进度保存在本机</li>
-<li>不依赖任何外部服务器，国内外访问一致</li>
+<li>不依赖 Google Fonts、CDN 等外部服务，所有文件都从本站加载</li>
 </ul>
 </td>
 </tr>
