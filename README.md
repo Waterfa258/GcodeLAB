@@ -24,15 +24,15 @@
 
 ## 直接进入
 
-| 板块 | 能做什么 | 链接 |
-|---|---|---|
-| 📘&nbsp;**课程** | 22 节课，分六部分：基础、挤出、温度、读懂切片文件、多材料、进阶。每节有图示、常见错误和小测 | [打开](https://waterfa258.github.io/GcodeLAB/#lessons)&nbsp;·&nbsp;[EN](https://waterfa258.github.io/GcodeLAB/#en-lessons) |
-| ▶️&nbsp;**模拟器** | 逐行运行 G-code，俯视图 / 3D 看路径；打开自己的 `.gcode`、`.gcode.3mf`；文件分析和代码检查 | [打开](https://waterfa258.github.io/GcodeLAB/#sim)&nbsp;·&nbsp;[EN](https://waterfa258.github.io/GcodeLAB/#en-sim) |
-| 🧵&nbsp;**耗材** | 20 种常见耗材的打印温度、干燥、性能对比，附温度代码和多材料结合表 | [打开](https://waterfa258.github.io/GcodeLAB/#materials)&nbsp;·&nbsp;[EN](https://waterfa258.github.io/GcodeLAB/#en-materials) |
-| 🎨&nbsp;**多材料** | 逐行拆解一次换料：冲刷、渗料、待机温度、喷头偏移 | [打开](https://waterfa258.github.io/GcodeLAB/#mm)&nbsp;·&nbsp;[EN](https://waterfa258.github.io/GcodeLAB/#en-mm) |
-| 🔧&nbsp;**切片软件** | PrusaSlicer、OrcaSlicer / Bambu Studio、Cura、Klipper 宏的写法对照 | [打开](https://waterfa258.github.io/GcodeLAB/#slicers)&nbsp;·&nbsp;[EN](https://waterfa258.github.io/GcodeLAB/#en-slicers) |
-| ✅&nbsp;**练习** | 自己写代码，网页执行后逐条判分；另有选择题 | [打开](https://waterfa258.github.io/GcodeLAB/#practice)&nbsp;·&nbsp;[EN](https://waterfa258.github.io/GcodeLAB/#en-practice) |
-| 📋&nbsp;**速查表** | 常用指令的作用、示例和 Marlin / Klipper / RepRapFirmware 支持情况，可搜索 | [打开](https://waterfa258.github.io/GcodeLAB/#ref)&nbsp;·&nbsp;[EN](https://waterfa258.github.io/GcodeLAB/#en-ref) |
+点名称直接打开对应页面：
+
+- 📘 **[课程](https://waterfa258.github.io/GcodeLAB/#lessons)**：22 节课，分六部分：基础、挤出、温度、读懂切片文件、多材料、进阶。每节有图示、常见错误和小测 <sub>[English](https://waterfa258.github.io/GcodeLAB/#en-lessons)</sub>
+- ▶️ **[模拟器](https://waterfa258.github.io/GcodeLAB/#sim)**：逐行运行 G-code，俯视图 / 3D 看路径；打开自己的 `.gcode`、`.gcode.3mf`；文件分析和代码检查 <sub>[English](https://waterfa258.github.io/GcodeLAB/#en-sim)</sub>
+- 🧵 **[耗材](https://waterfa258.github.io/GcodeLAB/#materials)**：20 种常见耗材的打印温度、干燥、性能对比，附温度代码和多材料结合表 <sub>[English](https://waterfa258.github.io/GcodeLAB/#en-materials)</sub>
+- 🎨 **[多材料](https://waterfa258.github.io/GcodeLAB/#mm)**：逐行拆解一次换料：冲刷、渗料、待机温度、喷头偏移 <sub>[English](https://waterfa258.github.io/GcodeLAB/#en-mm)</sub>
+- 🔧 **[切片软件](https://waterfa258.github.io/GcodeLAB/#slicers)**：PrusaSlicer、OrcaSlicer / Bambu Studio、Cura、Klipper 宏的写法对照 <sub>[English](https://waterfa258.github.io/GcodeLAB/#en-slicers)</sub>
+- ✅ **[练习](https://waterfa258.github.io/GcodeLAB/#practice)**：自己写代码，网页执行后逐条判分；另有选择题 <sub>[English](https://waterfa258.github.io/GcodeLAB/#en-practice)</sub>
+- 📋 **[速查表](https://waterfa258.github.io/GcodeLAB/#ref)**：常用指令的作用、示例和 Marlin / Klipper / RepRapFirmware 支持情况，可搜索 <sub>[English](https://waterfa258.github.io/GcodeLAB/#en-ref)</sub>
 
 第一次来，建议按 **课程 → 模拟器 → 练习** 的顺序。
 
